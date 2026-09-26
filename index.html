@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Study Plan Generator — No Signup | PrepPilot</title>
+<meta name="description" content="PrepPilot's free AI study plan generator builds your personalized day-by-day timetable with spaced repetition, Pomodoro sessions & auto re-planning. No signup, unlimited.">
+<link rel="canonical" href="https://preppilot.app/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F59E0B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PrepPilot — Free AI Study Plan Generator">
+<meta property="og:description" content="Day-by-day AI study timetable with spaced repetition, Pomodoro sessions and missed-day re-planning. Free forever, no signup.">
+<meta property="og:url" content="https://preppilot.app/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PrepPilot — Free AI Study Plan Generator">
+<meta name="twitter:description" content="Day-by-day AI study timetable with spaced repetition, Pomodoro sessions and missed-day re-planning. Free forever, no signup.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F59E0B'/%3E%3Cpath d='M32 14 8 24l24 10 18-7.5V38h4V24L32 14z' fill='%231E1B4B'/%3E%3Cpath d='M18 34.5V44c0 3.3 6.3 6 14 6s14-2.7 14-6v-9.5l-14 5.8-14-5.8z' fill='%23FFFBF2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { paper: '#FFFBF2', cream: '#FFFDF8', ink: '#1E1B4B', coral: '#FB7185' },
+      fontFamily: { display: ['"Plus Jakarta Sans"', 'sans-serif'], body: ['Inter', 'sans-serif'] },
+      boxShadow: {
+        card: '0 10px 30px -12px rgba(30,27,75,.15)',
+        lift: '0 18px 44px -16px rgba(30,27,75,.25)'
+      }
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PrepPilot AI Study Plan Generator","applicationCategory":"EducationalApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free AI study plan generator that builds personalized day-by-day timetables with spaced repetition, Pomodoro sessions and automatic missed-day re-planning. No signup required.","url":"https://preppilot.app/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is PrepPilot really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. PrepPilot is 100% free with unlimited plan generations. There is no signup, no paywall and no watermark."}},
+{"@type":"Question","name":"How does the AI build my study plan?","acceptedAnswer":{"@type":"Answer","text":"You enter your exam name, exam date, daily study hours and topics. The AI reverse-plans from your exam date backwards, placing harder topics in morning sessions, scheduling mock tests, buffer days and spaced-repetition revisions automatically."}},
+{"@type":"Question","name":"What is spaced repetition and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"Spaced repetition revisits each topic at increasing intervals (1, 3, 7 and 14 days). This timing fights the forgetting curve and is one of the most research-backed ways to remember more with less total study time."}},
+{"@type":"Question","name":"What happens if I miss a day of study?","acceptedAnswer":{"@type":"Answer","text":"Tap 'Re-plan remaining' and PrepPilot redistributes your unchecked sessions across the remaining days, so one missed day never breaks your whole plan."}},
+{"@type":"Question","name":"Which exams is PrepPilot good for?","acceptedAnswer":{"@type":"Answer","text":"Any exam with a date and a syllabus: JEE, NEET, UPSC, SSC, banking exams, CA, board exams, university semesters, GRE, GMAT and professional certifications."}},
+{"@type":"Question","name":"Do I need to create an account? Is my data private?","acceptedAnswer":{"@type":"Answer","text":"No account needed. Your plan is generated in your browser session and your checkmarks are saved only in your own browser's local storage. Nothing is uploaded to or stored on any server."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"The Complete Guide to AI Study Planning: Spaced Repetition, Pomodoro & Reverse Planning","author":{"@type":"Organization","name":"PrepPilot"},"datePublished":"2026-09-26","description":"Learn why study plans fail and how spaced repetition, Pomodoro sessions and reverse planning from your exam date build a timetable that actually works."}
+</script>
+  <script type="module" crossorigin>(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const a of i)if(a.type==="childList")for(const c of a.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&n(c)}).observe(document,{childList:!0,subtree:!0});function s(i){const a={};return i.integrity&&(a.integrity=i.integrity),i.referrerPolicy&&(a.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?a.credentials="include":i.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function n(i){if(i.ep)return;i.ep=!0;const a=s(i);fetch(i.href,a)}})();const Q="https://fixoraa-universal-backend.onrender.com/api/groq",X="llama-3.1-8b-instant",I="preppilot-plan-v1",Z=14,o=e=>document.getElementById(e),Y=e=>String(e).padStart(2,"0"),f=e=>`${e.getFullYear()}-${Y(e.getMonth()+1)}-${Y(e.getDate())}`,S=e=>new Date(e+"T12:00:00"),L=(e,t)=>{const s=S(e);return s.setDate(s.getDate()+t),f(s)},g=(e,t)=>Math.round((S(t)-S(e))/864e5),M=e=>S(e).toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"}),O=e=>String(e).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");let p=null,y={},h={};async function G(e){var i,a,c,d,r,u,l;const t=await fetch(Q,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:X,messages:[{role:"user",content:e}]})});if(!t.ok)throw new Error("AI service returned "+t.status+". Please try again.");const s=await t.json(),n=((c=(a=(i=s==null?void 0:s.choices)==null?void 0:i[0])==null?void 0:a.message)==null?void 0:c.content)??((l=(u=(r=(d=s==null?void 0:s.data)==null?void 0:d.choices)==null?void 0:r[0])==null?void 0:u.message)==null?void 0:l.content)??"";if(!n||!n.trim())throw new Error("The AI returned an empty response. Please try again.");return n}function J(e){let t=e.trim().replace(/^```(?:json)?/i,"").replace(/```\s*$/,"").trim();const s=t.indexOf("{"),n=t.lastIndexOf("}");if(s===-1||n===-1||n<=s)throw new Error("Could not parse the AI response. Please try again.");return JSON.parse(t.slice(s,n+1))}function ee(e){return e.split(`
+`).map(t=>t.trim()).filter(Boolean).map(t=>{const s=t.match(/\[(hard|medium|easy)\]\s*$/i),n=s?s[1].toLowerCase():"medium";return{name:t.replace(/\[(hard|medium|easy)\]\s*$/i,"").trim(),difficulty:n}}).filter(t=>t.name)}function te(e){const t=e.lang==="hinglish"?'Write ALL topic names and notes in Hinglish (Hindi written in Roman script, friendly student tone, e.g. "Rotational Mechanics ka revision karo").':"Write ALL content in clear, encouraging English.",s=e.scheduled.length?`Topics already introduced earlier (topic -> first learn date):
+`+e.scheduled.map(n=>`- ${n.topic} (first learned ${n.date})`).join(`
+`):"No topics scheduled yet — this is the first chunk.";return`You are PrepPilot, an expert exam coach. Build a detailed study timetable as STRICT JSON for the date range below.
+Exam: ${e.examName}
+Chunk: ${e.chunkStart} to ${e.chunkEnd} (${e.days} days). Study days run right up to (but not including) the exam date ${e.examDate}.
+Daily study target: about ${e.dailyMin} minutes. Focus session length: ${e.sessLen} minutes.
+Topics (with difficulty): ${e.topics.map(n=>`${n.name} [${n.difficulty}]`).join(" | ")}
+${s}
+${e.isLast?'THIS CHUNK ENDS THE DAY BEFORE THE EXAM. Rules for the final day: ONLY light revision sessions (type "revision"), no new topics, no mock test. The student must sleep early.':""}
+HARD RULES:
+1. SPACED REPETITION: every topic learned in this chunk (or listed above) must get revision sessions (type "revision") at +1, +3, +7 and +14 days after its first learn date — include only the dates that fall inside this chunk.
+2. Hardest topics go in the FIRST sessions of each day (morning = peak energy). Easy topics and revision go later.
+3. After every 2 focus sessions add a short break session (type "break", 5-10 minutes).
+4. ${e.isLast?'Place exactly ONE full mock test (type "mock", 180 minutes) on the date 7 days before the exam, but ONLY if that date is inside this chunk. Immediately after the mock add a 60-minute analysis session (type "revision", notes about reviewing mistakes).':'If a date exactly 7 days before the exam falls inside this chunk, place exactly ONE full mock test (type "mock", 180 minutes) there, followed by a 60-minute analysis session (type "revision").'}
+5. Daily total minutes must be within 15% of ${e.dailyMin}.
+6. ${t}
+7. Keep notes short (under 12 words), practical and specific.
+Return ONLY valid JSON, no markdown fences, no commentary, exactly this shape:
+{"days":[{"date":"YYYY-MM-DD","sessions":[{"topic":"...","minutes":25,"type":"learn","notes":"..."}]}]}
+Allowed type values: "learn", "revision", "mock", "break".`}function ne(e){return`You are PrepPilot, an expert exam coach. A student missed some study sessions. Redistribute ONLY the sessions below across the remaining dates.
+Exam: ${e.examName}. Remaining dates: ${e.dates.join(", ")}.
+Remaining sessions (topic | minutes | type): ${e.sessions.map(t=>`${t.topic} | ${t.minutes}min | ${t.type}`).join(" ;; ")}
+HARD RULES:
+1. Use every remaining session exactly once. Do not invent new topics.
+2. Hard topics in morning (first) sessions; keep revision sessions near their original order where possible.
+3. Daily total about ${e.dailyMin} minutes (±20%). Add 5-10 min breaks (type "break") after every 2 focus sessions.
+4. If the last date is the day before the exam, keep it light: only revision, no new learning.
+5. ${e.lang==="hinglish"?"Write notes in Hinglish (Roman script).":"Write notes in English."}
+Return ONLY valid JSON, no markdown, exactly: {"days":[{"date":"YYYY-MM-DD","sessions":[{"topic":"...","minutes":25,"type":"learn","notes":"..."}]}]}`}function U(e){o("loadingText").textContent=e,o("loadingOverlay").classList.remove("hidden"),o("btnGenerate").disabled=!0}function P(){o("loadingOverlay").classList.add("hidden"),o("btnGenerate").disabled=!1}function $(e){const t=o("errorBanner");t.textContent=e,t.classList.remove("hidden"),t.scrollIntoView({behavior:"smooth",block:"center"})}function C(){o("errorBanner").classList.add("hidden")}let j=null;function b(e){const t=o("toast");t.textContent=e,t.classList.remove("translate-y-24","opacity-0"),clearTimeout(j),j=setTimeout(()=>t.classList.add("translate-y-24","opacity-0"),2200)}function A(){try{localStorage.setItem(I,JSON.stringify({plan:p,checked:y,meta:h}))}catch{}}function se(){try{const e=localStorage.getItem(I);if(!e)return!1;const t=JSON.parse(e);return!t.plan||!t.plan.days||!t.plan.days.length?!1:(p=t.plan,y=t.checked||{},h=t.meta||{},!0)}catch{return!1}}function ae(){const e=new Date;e.setDate(e.getDate()+45),o("examName").value="JEE Main",o("examDate").value=f(e),o("dailyHours").value=5,o("sessLen").value="25",document.querySelector('input[name="lang"][value="english"]').checked=!0,o("topics").value=["Physics: Kinematics [easy]","Physics: Rotational Mechanics [hard]","Physics: Electrostatics [medium]","Chemistry: Chemical Bonding [medium]","Chemistry: GOC - Organic Basics [hard]","Chemistry: Thermodynamics [medium]","Maths: Quadratic Equations [easy]","Maths: Definite Integration [hard]","Maths: Probability [medium]","Maths: Vectors and 3D Geometry [medium]"].join(`
+`)}async function B(){C();const e=o("examName").value.trim()||"My Exam",t=o("examDate").value,s=Math.min(14,Math.max(1,parseFloat(o("dailyHours").value)||5)),n=parseInt(o("sessLen").value,10)||25,i=ee(o("topics").value),a=document.querySelector('input[name="lang"]:checked').value,c=f(new Date);if(!t){$("Please pick your exam date.");return}const d=g(c,t);if(d<3){$("Pick an exam date at least 3 days in the future so the AI can build a real plan.");return}if(!i.length){$("Add at least 3 topics — one per line.");return}const r=d>60?L(t,-60):c;if(d>60){const m=o("horizonNote");m.textContent=`Heads up: showing the final, highest-impact 60 days before your exam (${M(r)} → ${M(L(t,-1))}). Use the early weeks for foundation reading.`,m.classList.remove("hidden")}else o("horizonNote").classList.add("hidden");const u=[];let l=r;for(;g(l,t)>0;){const m=Math.min(Z,g(l,t)),k=L(l,m-1);u.push({start:l,end:k,len:m}),l=L(k,1)}const x=Math.round(s*60),E=[],v={};try{for(let m=0;m<u.length;m++){const k=u[m];U(`Building your plan… (part ${m+1} of ${u.length})`);const z=Object.keys(v).map(w=>({topic:w,date:v[w]})),V=te({examName:e,chunkStart:k.start,chunkEnd:k.end,days:k.len,dailyMin:x,sessLen:n,topics:i,scheduled:z,lang:a,examDate:t,isLast:m===u.length-1}),N=J(await G(V));if(!N.days||!N.days.length)throw new Error("The AI returned an empty plan. Please try again.");for(const w of N.days){for(const D of w.sessions||[])D.type==="learn"&&D.topic&&!v[D.topic]&&(v[D.topic]=w.date);E.push(w)}}}catch(m){P(),$(m.message||"Something went wrong. Please try again.");return}P(),p={days:E},y={},h={examName:e,examDate:t,lang:a,hours:s,sessLen:n,generatedAt:new Date().toISOString(),topics:i.map(m=>m.name)},A(),R(),o("planMeta").scrollIntoView({behavior:"smooth",block:"start"}),b("Your study plan is ready!")}const H={learn:"bg-indigo-100 text-indigo-800 border-indigo-200",revision:"bg-amber-100 text-amber-800 border-amber-200",mock:"bg-rose-100 text-rose-800 border-rose-200",break:"bg-slate-100 text-slate-500 border-slate-200"},oe={learn:"Learn",revision:"Revision",mock:"Mock test",break:"Break"};function W(e){const t=p.days[e];let s=0,n=0,i=0;return t.sessions.forEach((a,c)=>{a.type!=="break"&&(s++,i+=a.minutes||0,y[e+"-"+c]&&n++)}),{total:s,done:n,mins:i,pct:s?Math.round(n/s*100):100}}function ie(){const e=f(new Date),t=Math.max(0,g(e,h.examDate));o("metaExam").textContent=h.examName;let s=0,n=0;p.days.forEach(i=>i.sessions.forEach(a=>{a.type!=="break"&&(s++,n+=a.minutes||0)})),o("metaSub").textContent=`${p.days.length} days • ${s} sessions • ~${Math.round(n/60)} hours planned • ${h.lang==="hinglish"?"Hinglish":"English"}`,o("daysLeftNum").textContent=t,o("planMeta").classList.remove("hidden"),o("actionBar").classList.remove("hidden"),o("actionBar").classList.add("flex")}function F(){let e=0,t=0;p.days.forEach((n,i)=>{const a=W(i);e+=a.total,t+=a.done});const s=e?Math.round(t/e*100):0;o("overallPct").textContent=s+"%",o("overallBar").style.width=s+"%"}function K(){const e=o("timetable"),t=f(new Date);e.innerHTML=p.days.map((s,n)=>{const i=W(n),a=g(s.date,t)<0,c=s.date===t,d=s.sessions.map((r,u)=>{const l=n+"-"+u,x=!!y[l],E=`<span class="type-chip inline-block text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${H[r.type]||H.learn}">${oe[r.type]||r.type}</span>`,v=r.type==="break"?'<span class="w-[1.15rem] shrink-0"></span>':`<input type="checkbox" class="sess-check" data-d="${n}" data-s="${u}" ${x?"checked":""} aria-label="Mark session done">`;return`<div class="flex items-start gap-3 py-2.5 border-b border-ink/5 last:border-0 ${x?"session-done":""}">
+        ${v}
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="sess-topic text-sm font-bold">${O(r.topic)}</span>${E}
+            <span class="text-xs font-semibold text-ink/50">${r.minutes} min</span>
+          </div>
+          ${r.notes?`<p class="text-xs text-ink/55 mt-0.5">${O(r.notes)}</p>`:""}
+        </div>
+      </div>`}).join("");return`<div class="print-card rounded-2xl bg-white border ${c?"border-amber-500 ring-2 ring-amber-200":"border-ink/10"} shadow-card overflow-hidden">
+      <button class="day-toggle w-full flex items-center justify-between gap-3 px-5 sm:px-6 py-4 text-left" data-day="${n}">
+        <div class="flex items-center gap-3 min-w-0">
+          <span class="font-display font-extrabold text-lg whitespace-nowrap">Day ${n+1}</span>
+          <span class="text-sm font-semibold text-ink/60 truncate">${M(s.date)}${c?' • <span class="text-amber-600 font-bold">Today</span>':""}${a?' • <span class="text-ink/40">past</span>':""}</span>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="text-xs font-bold text-ink/60">${i.done}/${i.total}</span>
+          <div class="w-20 sm:w-28 h-2 rounded-full bg-ink/10 overflow-hidden"><div class="h-full rounded-full bg-amber-500 transition-all" style="width:${i.pct}%"></div></div>
+          <span class="text-ink/40 text-sm">▾</span>
+        </div>
+      </button>
+      <div class="day-sessions px-5 sm:px-6 pb-2" data-sessions="${n}">${d}</div>
+    </div>`}).join(""),e.classList.remove("hidden"),e.querySelectorAll(".sess-check").forEach(s=>{s.addEventListener("change",()=>{const n=s.dataset.d+"-"+s.dataset.s;s.checked?y[n]=!0:delete y[n],A(),K(),F(),_()})}),e.querySelectorAll(".day-toggle").forEach(s=>{s.addEventListener("click",()=>{const n=e.querySelector(`[data-sessions="${s.dataset.day}"]`);n.style.display=n.style.display==="none"?"":"none"})})}function q(e){return e.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim()}function _(){const e=h.topics&&h.topics.length?h.topics:[],t={};e.forEach(n=>{t[n]={total:0,done:0}}),p.days.forEach((n,i)=>{n.sessions.forEach((a,c)=>{if(a.type==="break"||!a.topic)return;const d=q(a.topic),r=e.find(u=>{const l=q(u);return l&&(d.includes(l)||l.includes(d))});r&&(t[r].total++,y[i+"-"+c]&&t[r].done++)})});const s=e.map(n=>{const i=t[n],a=i.total?Math.round(i.done/i.total*100):0;return`<div>
+      <div class="flex justify-between text-sm mb-1"><span class="font-bold truncate pr-3">${O(n)}</span><span class="font-bold text-ink/60 shrink-0">${i.done}/${i.total} • ${a}%</span></div>
+      <div class="h-2.5 rounded-full bg-ink/10 overflow-hidden"><div class="h-full rounded-full ${a===100?"bg-emerald-500":"bg-gradient-to-r from-amber-400 to-coral"} transition-all" style="width:${a}%"></div></div>
+    </div>`}).join("");o("tracker").innerHTML=s||'<p class="text-sm text-ink/60">No topics detected yet.</p>',o("trackerWrap").classList.remove("hidden")}function R(){p&&(ie(),K(),F(),_())}async function re(){C();const e=f(new Date),t=[];if(p.days.forEach((a,c)=>{g(a.date,e)<0||a.sessions.forEach((d,r)=>{d.type==="break"||y[c+"-"+r]||t.push({topic:d.topic,minutes:d.minutes,type:d.type})})}),!t.length){b("All caught up — nothing to re-plan!");return}const s=p.days[p.days.length-1].date;let n=[];for(let a=e;g(a,s)<=0&&n.length<21;a=L(a,1))n.push(a);if(!n.length){$("Your exam has passed — time to celebrate, not re-plan!");return}const i=Math.round((h.hours||5)*60);U("Re-planning your remaining sessions…");try{const a=J(await G(ne({examName:h.examName,dates:n,sessions:t,dailyMin:i,lang:h.lang})));if(!a.days||!a.days.length)throw new Error("The AI returned an empty plan. Please try again.");const c={};a.days.forEach(r=>{c[r.date]=r.sessions||[]}),p.days.forEach((r,u)=>{c[r.date]&&(r.sessions=c[r.date],Object.keys(y).forEach(l=>{l.startsWith(u+"-")&&delete y[l]}))}),A(),R(),P();const d=o("replanNote");d.textContent=`✓ Re-planned just now: ${t.length} remaining sessions redistributed across ${n.length} days. Missed days are history — keep going!`,d.classList.remove("hidden"),b("Plan updated!")}catch(a){P(),$(a.message||"Re-planning failed. Please try again.")}}function T(){const e=f(new Date),t=Math.max(0,g(e,h.examDate));let s=0,n=0,i=0,a=0;p.days.forEach((r,u)=>r.sessions.forEach((l,x)=>{l.type!=="break"&&(s++,n+=l.minutes||0,a++,y[u+"-"+x]&&i++)}));const c=`My PrepPilot study plan for ${h.examName}: ${t} days left, ${s} sessions (~${Math.round(n/60)} hrs), ${a?Math.round(i/a*100):0}% done.`,d=p.days.slice(0,3).map((r,u)=>`Day ${u+1} (${M(r.date)}): `+r.sessions.filter(l=>l.type!=="break").slice(0,3).map(l=>l.topic).join(", ")).join(`
+`);return c+`
+`+d+`
+Built free with PrepPilot AI Study Plan Generator.`}function ce(){const e="https://wa.me/?text="+encodeURIComponent(T().slice(0,1500));window.open(e,"_blank","noopener")}async function le(){try{await navigator.clipboard.writeText(T()),b("Summary copied to clipboard!")}catch{const t=document.createElement("textarea");t.value=T(),document.body.appendChild(t),t.select();try{document.execCommand("copy"),b("Summary copied!")}catch{b("Copy failed — select the text manually.")}t.remove()}}function de(){const e=new Date;e.setDate(e.getDate()+60),o("examDate").value=f(e),o("examDate").min=f(new Date),o("btnGenerate").addEventListener("click",B),o("btnSample").addEventListener("click",()=>{ae(),B()}),o("btnReplan").addEventListener("click",re),o("btnPrint").addEventListener("click",()=>window.print()),o("btnShare").addEventListener("click",ce),o("btnCopy").addEventListener("click",le),o("btnReset").addEventListener("click",()=>{if(confirm("Start over? This clears your current plan and progress.")){try{localStorage.removeItem(I)}catch{}p=null,y={},h={},["planMeta","timetable","trackerWrap"].forEach(t=>o(t).classList.add("hidden")),o("actionBar").classList.add("hidden"),o("actionBar").classList.remove("flex"),o("replanNote").classList.add("hidden"),o("horizonNote").classList.add("hidden"),C(),o("inputCard").scrollIntoView({behavior:"smooth"}),b("Fresh start — build a new plan!")}}),se()&&R()}document.addEventListener("DOMContentLoaded",de);</script>
+  <style rel="stylesheet" crossorigin>html{scroll-behavior:smooth}.font-display{font-family:Plus Jakarta Sans,sans-serif}body{font-family:Inter,sans-serif}.ring-anim{transition:stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1)}.sess-check{accent-color:#F59E0B;width:1.15rem;height:1.15rem;cursor:pointer;flex-shrink:0}.session-done{opacity:.55}.session-done .sess-topic{text-decoration:line-through}details.faq{transition:background .2s}details.faq[open]{background:#fff}details.faq summary::-webkit-details-marker{display:none}details.faq summary{cursor:pointer;list-style:none}details.faq summary .faq-icon{transition:transform .25s}details.faq[open] summary .faq-icon{transform:rotate(45deg)}.spinner{width:3rem;height:3rem;border-radius:9999px;border:4px solid #fde68a;border-top-color:#f59e0b;animation:spin .9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}#toast{transition:transform .3s,opacity .3s}.day-sessions{overflow:hidden}@media print{.no-print{display:none!important}body{background:#fff!important}#tool{padding:0!important}.print-card{box-shadow:none!important;border:1px solid #000!important;break-inside:avoid}.type-chip{border:1px solid #555!important;background:#fff!important;color:#000!important}.sess-check{display:none!important}a{text-decoration:none!important;color:#000!important}#timetable,.day-sessions{display:block!important}}</style>
+</head>
+<body class="bg-paper text-ink font-body antialiased">
+
+<!-- ================= HEADER ================= -->
+<header class="no-print sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/10">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5">
+      <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#F59E0B"/><path d="M32 14 8 24l24 10 18-7.5V38h4V24L32 14z" fill="#1E1B4B"/><path d="M18 34.5V44c0 3.3 6.3 6 14 6s14-2.7 14-6v-9.5l-14 5.8-14-5.8z" fill="#FFFBF2"/></svg>
+      <span class="font-display font-extrabold text-xl tracking-tight">PrepPilot</span>
+    </a>
+    <nav class="flex items-center gap-5 text-sm font-semibold">
+      <a href="#" class="hover:text-amber-600 transition">Home</a>
+      <a href="https://fixoraa.tech" target="_blank" rel="noopener" class="rounded-xl bg-ink text-cream px-4 py-2 hover:bg-ink/85 transition">More Tools</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="no-print relative overflow-hidden">
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-amber-200/50 blur-3xl pointer-events-none"></div>
+  <div class="absolute top-40 -left-24 w-80 h-80 rounded-full bg-coral/20 blur-3xl pointer-events-none"></div>
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 pt-14 pb-10 sm:pt-20 sm:pb-14 text-center">
+    <span class="inline-flex items-center gap-2 rounded-full bg-white border border-ink/10 shadow-card px-4 py-1.5 text-xs font-bold tracking-wide">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      100% FREE &nbsp;•&nbsp; NO SIGNUP &nbsp;•&nbsp; UNLIMITED PLANS
+    </span>
+    <h1 class="font-display font-extrabold tracking-tight text-4xl sm:text-6xl mt-6 leading-[1.05]">
+      Your AI study plan,<br class="hidden sm:block"> built <span class="text-amber-500">backwards</span> from<br class="hidden sm:block"> your exam date.
+    </h1>
+    <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70 leading-relaxed">
+      PrepPilot reverse-plans every day till your exam — with spaced repetition, Pomodoro focus sessions,
+      mock tests, and automatic re-planning when life happens.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a href="#tool" class="rounded-2xl bg-amber-500 px-8 py-4 text-sm font-bold text-ink shadow-lift hover:bg-amber-400 transition">Generate My Free Plan</a>
+      <a href="#guide" class="rounded-2xl border border-ink/20 bg-white px-8 py-4 text-sm font-bold hover:border-ink/40 transition">How it works</a>
+    </div>
+    <dl class="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 text-center">
+      <div class="rounded-2xl border border-ink/10 bg-white px-2 py-5 shadow-card"><dd class="font-display text-2xl sm:text-3xl font-extrabold text-amber-500">1·3·7·14</dd><dd class="mt-1 text-xs font-medium text-ink/60">day spaced<br>repetition</dd></div>
+      <div class="rounded-2xl border border-ink/10 bg-white px-2 py-5 shadow-card"><dd class="font-display text-2xl sm:text-3xl font-extrabold">Auto</dd><dd class="mt-1 text-xs font-medium text-ink/60">missed-day<br>re-planning</dd></div>
+      <div class="rounded-2xl border border-ink/10 bg-white px-2 py-5 shadow-card"><dd class="font-display text-2xl sm:text-3xl font-extrabold text-coral">$0</dd><dd class="mt-1 text-xs font-medium text-ink/60">forever,<br>no signup</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= TOP AD ================= -->
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <div class="origin-top scale-[0.44] sm:scale-100 shrink-0">
+<script>
+  atOptions = { 'key' : '4e68ac77881c17fe128a46565d9a4e8c', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+</script>
+<script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TOOL ================= -->
+<section id="tool" class="scroll-mt-20 mx-auto max-w-6xl px-4 sm:px-6 py-10">
+  <div class="mx-auto max-w-4xl">
+
+    <!-- INPUT CARD -->
+    <div id="inputCard" class="no-print rounded-2xl bg-white border border-ink/10 shadow-card p-6 sm:p-8">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <h2 class="font-display font-extrabold text-2xl tracking-tight">Build your plan</h2>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-bold text-emerald-700">100% Free • No Signup</span>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="examName" class="block text-sm font-bold mb-1.5">Exam name</label>
+          <input id="examName" type="text" placeholder="e.g. JEE Main, NEET, UPSC Prelims, Boards" class="w-full rounded-xl border border-ink/15 bg-cream px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        <div>
+          <label for="examDate" class="block text-sm font-bold mb-1.5">Exam date</label>
+          <input id="examDate" type="date" class="w-full rounded-xl border border-ink/15 bg-cream px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        <div>
+          <label for="dailyHours" class="block text-sm font-bold mb-1.5">Study hours per day</label>
+          <input id="dailyHours" type="number" min="1" max="14" value="5" class="w-full rounded-xl border border-ink/15 bg-cream px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        <div>
+          <label for="sessLen" class="block text-sm font-bold mb-1.5">Focus session length</label>
+          <select id="sessLen" class="w-full rounded-xl border border-ink/15 bg-cream px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+            <option value="25">25 min — classic Pomodoro</option>
+            <option value="50">50 min — deep focus</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <label for="topics" class="block text-sm font-bold mb-1.5">Topics <span class="font-medium text-ink/50">(one per line — add [hard], [medium] or [easy] if you like)</span></label>
+        <textarea id="topics" rows="6" placeholder="Physics: Rotational Mechanics [hard]&#10;Chemistry: Chemical Bonding [medium]&#10;Maths: Probability [easy]" class="w-full rounded-xl border border-ink/15 bg-cream px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+      </div>
+
+      <div class="mt-5 flex items-center gap-3 flex-wrap">
+        <span class="text-sm font-bold">Plan language:</span>
+        <label class="inline-flex items-center gap-2 rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold cursor-pointer has-[:checked]:bg-ink has-[:checked]:text-cream transition">
+          <input type="radio" name="lang" value="english" checked class="accent-amber-500"> English
+        </label>
+        <label class="inline-flex items-center gap-2 rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold cursor-pointer has-[:checked]:bg-ink has-[:checked]:text-cream transition">
+          <input type="radio" name="lang" value="hinglish" class="accent-amber-500"> Hinglish
+        </label>
+      </div>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <button id="btnGenerate" class="rounded-2xl bg-amber-500 px-8 py-4 text-sm font-bold text-ink shadow-lift hover:bg-amber-400 transition disabled:opacity-50">⚡ Generate My Plan</button>
+        <button id="btnSample" class="rounded-2xl border border-ink/20 bg-white px-6 py-4 text-sm font-bold hover:border-ink/40 transition">Try a sample</button>
+      </div>
+      <p class="mt-4 text-xs text-ink/50 leading-relaxed">🔒 Your plan is generated in your browser session. Nothing is uploaded to or stored on any server — checkmarks are saved only in your own browser.</p>
+    </div>
+
+    <!-- ERROR -->
+    <div id="errorBanner" class="no-print hidden mt-4 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-700"></div>
+
+    <!-- COUNTDOWN + PROGRESS -->
+    <div id="planMeta" class="hidden mt-8">
+      <div class="rounded-2xl bg-ink text-cream p-6 sm:p-8 shadow-lift relative overflow-hidden">
+        <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-amber-500/20 blur-2xl pointer-events-none"></div>
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="text-xs font-bold tracking-[0.2em] uppercase text-amber-400">Your mission</p>
+            <h3 id="metaExam" class="font-display font-extrabold text-2xl mt-1"></h3>
+            <p id="metaSub" class="text-sm text-cream/70 mt-1"></p>
+          </div>
+          <div id="countdownBadge" class="rounded-2xl bg-amber-500 text-ink px-6 py-4 text-center shadow-lift">
+            <div id="daysLeftNum" class="font-display font-extrabold text-4xl leading-none">–</div>
+            <div class="text-xs font-bold mt-1">DAYS LEFT</div>
+          </div>
+        </div>
+        <div class="mt-5">
+          <div class="flex justify-between text-xs font-bold mb-1.5"><span>Overall progress</span><span id="overallPct">0%</span></div>
+          <div class="h-3 rounded-full bg-white/15 overflow-hidden"><div id="overallBar" class="h-full rounded-full bg-gradient-to-r from-amber-400 to-coral transition-all duration-500" style="width:0%"></div></div>
+        </div>
+        <p id="horizonNote" class="hidden mt-3 text-xs text-cream/60"></p>
+      </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div id="actionBar" class="no-print hidden mt-6 flex flex-wrap gap-3">
+      <button id="btnReplan" class="rounded-xl bg-coral px-5 py-3 text-sm font-bold text-white shadow-card hover:brightness-95 transition">🔁 Re-plan remaining</button>
+      <button id="btnPrint" class="rounded-xl border border-ink/20 bg-white px-5 py-3 text-sm font-bold hover:border-ink/40 transition">🖨️ Print</button>
+      <button id="btnShare" class="rounded-xl border border-ink/20 bg-white px-5 py-3 text-sm font-bold hover:border-ink/40 transition">💬 WhatsApp share</button>
+      <button id="btnCopy" class="rounded-xl border border-ink/20 bg-white px-5 py-3 text-sm font-bold hover:border-ink/40 transition">📋 Copy summary</button>
+      <button id="btnReset" class="rounded-xl px-5 py-3 text-sm font-bold text-ink/50 hover:text-ink transition">Start over</button>
+    </div>
+    <p id="replanNote" class="no-print hidden mt-3 text-sm font-medium text-coral"></p>
+
+    <!-- TIMETABLE -->
+    <div id="timetable" class="hidden mt-8 space-y-5"></div>
+
+    <!-- SYLLABUS TRACKER -->
+    <div id="trackerWrap" class="hidden mt-8 rounded-2xl bg-white border border-ink/10 shadow-card p-6 sm:p-8">
+      <h3 class="font-display font-extrabold text-xl tracking-tight">📊 Syllabus tracker</h3>
+      <p class="text-sm text-ink/60 mt-1">Auto-updates as you tick off sessions.</p>
+      <div id="tracker" class="mt-5 space-y-4"></div>
+    </div>
+  </div>
+
+  <!-- LOADING OVERLAY -->
+  <div id="loadingOverlay" class="no-print hidden fixed inset-0 z-[60] bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="rounded-2xl bg-white p-8 text-center shadow-lift max-w-xs w-full">
+      <div class="spinner mx-auto"></div>
+      <p id="loadingText" class="mt-4 text-sm font-bold">Building your plan…</p>
+      <p class="mt-1 text-xs text-ink/50">The AI is reverse-planning from your exam date.</p>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="no-print fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 z-[70] rounded-xl bg-ink text-cream px-5 py-3 text-sm font-bold shadow-lift pointer-events-none"></div>
+</section>
+
+<!-- ================= BOTTOM AD ================= -->
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pb-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+<script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="464498"></script>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SEO ARTICLE ================= -->
+<article id="guide" class="scroll-mt-20 border-t border-ink/10 bg-white">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-14">
+    <p class="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">The complete guide</p>
+    <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight">The Complete Guide to AI Study Planning: Spaced Repetition, Pomodoro &amp; Reverse Planning</h2>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Why Most Study Plans Fail (And It's Not Your Fault)</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">Almost every student has lived this story. You buy a new notebook, write an ambitious timetable — six subjects, ten hours a day — and by Thursday the plan is dead. The problem is rarely discipline. The problem is that most study plans are built on hope instead of how memory actually works. A plan that says "study physics for 3 hours" gives your brain no structure, no feedback loop, and no room for the days when life happens. When one bad day breaks the chain, students abandon the entire system instead of adjusting it.</p>
+    <p class="mt-3 leading-relaxed text-ink/70">Research on self-regulated learning keeps finding the same thing: the students who improve fastest are not the ones who study the longest, but the ones whose plans do three things — space out revision over time, break work into focused sessions, and adapt when reality intrudes. That is exactly what an AI study plan generator is built to do. Instead of a static timetable, you get a living plan that schedules <em>when</em> to learn, <em>when</em> to revise, and <em>what to do</em> when you fall behind.</p>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Spaced Repetition: The Science Behind Remembering More</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">In the 1880s, Hermann Ebbinghaus discovered the forgetting curve: we lose roughly 70% of new information within 24 hours unless we revisit it. Spaced repetition is the direct counterattack. By reviewing each topic at expanding intervals — typically after 1 day, 3 days, 7 days and 14 days — you interrupt forgetting at exactly the moment it starts, and each successful recall makes the memory stronger and longer-lasting.</p>
+    <p class="mt-3 leading-relaxed text-ink/70">This is why PrepPilot automatically weaves revision sessions into your timetable at the 1-3-7-14 day marks for every topic you learn. You don't have to remember to revise rotational mechanics next Thursday — the plan already placed it there. Students using spaced repetition routinely report needing fewer total hours to reach the same scores, because every hour is spent at the moment of maximum memory payoff. It is the single highest-leverage technique in this entire guide.</p>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">How to Use the AI Study Plan Generator</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">Using PrepPilot takes about sixty seconds. Here is the exact process:</p>
+    <ol class="mt-3 space-y-2.5 leading-relaxed text-ink/70 list-decimal list-inside">
+      <li><strong>Enter your exam name and date.</strong> The AI reverse-plans from this date backwards, so every day has a purpose leading up to the big day.</li>
+      <li><strong>Set your daily hours and session length.</strong> Choose 25-minute Pomodoro blocks for lighter days or 50-minute deep-focus blocks when you're in flow.</li>
+      <li><strong>Paste your topics, one per line.</strong> Add <code class="bg-paper px-1.5 py-0.5 rounded text-sm">[hard]</code>, <code class="bg-paper px-1.5 py-0.5 rounded text-sm">[medium]</code> or <code class="bg-paper px-1.5 py-0.5 rounded text-sm">[easy]</code> tags — the AI puts hard topics in your high-energy morning sessions.</li>
+      <li><strong>Pick English or Hinglish.</strong> Your plan, your language.</li>
+      <li><strong>Hit Generate.</strong> In under a minute you get a day-by-day timetable with learn sessions, revision waves, mock tests and buffer days.</li>
+      <li><strong>Tick sessions as you finish them</strong> and watch your syllabus tracker fill up. Missed a day? Hit <strong>Re-plan remaining</strong> and the AI redistributes everything.</li>
+    </ol>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Reverse Planning: Start From the Exam and Work Backwards</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">Most students plan forward: "I'll start with chapter 1 and see how far I get." Reverse planning flips this. You anchor on the exam date, then allocate backwards: the final day becomes a light buffer (no new topics, only revision), mock tests land at fixed intervals before the exam, and the heaviest topics get the earliest slots when motivation is highest. PrepPilot does this automatically — it even reserves analysis sessions right after each mock test, because a mock you never review is just confidence theater.</p>
+    <p class="mt-3 leading-relaxed text-ink/70">This approach also kills the most common planning failure: running out of days. When you plan forward, revision is whatever time is "left over" — usually nothing. When you plan backwards, revision and mocks are scheduled first, and learning fills the remaining space. The result is a plan that finishes <em>before</em> the exam, not <em>at</em> it.</p>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Pomodoro Sessions: Why 25 Focused Minutes Beat 3 Distracted Hours</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">The Pomodoro Technique — 25 minutes of single-task focus followed by a 5-minute break — works because it matches how attention actually behaves. Your brain can sustain sharp focus in bursts; after about half an hour of continuous effort, returns diminish and your phone starts looking interesting. Short sessions also lower the psychological barrier to starting: "just 25 minutes" is a deal anyone can accept at 7am.</p>
+    <p class="mt-3 leading-relaxed text-ink/70">PrepPilot builds your timetable from these focus blocks, inserting short breaks between them. If you prefer longer stretches, switch to 50-minute deep-focus sessions. Either way, the plan also practices energy management: cognitively demanding topics land in morning sessions when your prefrontal cortex is freshest, while lighter revision fills the evenings.</p>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Mock Tests and the Buffer Day: Your Secret Weapons</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">Toppers across JEE, NEET and UPSC repeat the same advice: mocks are not practice, they are rehearsal. A full-length mock under timed conditions trains exam temperament — pacing, question selection, and staying calm when a section goes badly. PrepPilot schedules full mocks at sensible intervals through your plan, each followed by a dedicated analysis session. The rule is simple: never take a mock you won't analyze, and never analyze longer than the mock took.</p>
+    <p class="mt-3 leading-relaxed text-ink/70">The buffer day — the final day before your exam — deserves special mention. Cramming new material the night before raises anxiety without adding marks. PrepPilot keeps this day deliberately light: short revision bursts, formula sheets, and an early night. You walk into the hall rested instead of rattled.</p>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Who Is PrepPilot For?</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">Anyone with an exam date and a syllabus. JEE and NEET aspirants use it to balance Physics, Chemistry, Maths and Biology across months. UPSC candidates split Prelims and Mains preparation without dropping either. Board exam students turn "the whole syllabus" into a calm daily checklist. It works equally well for university semesters, CA preparation, SSC and banking exams, GRE and GMAT, and professional certifications. If your exam has a date, PrepPilot can reverse-plan it.</p>
+    <p class="mt-3 leading-relaxed text-ink/70">And because plans are available in both English and Hinglish, students across India can study in the language they actually think in — no translation friction between the plan and the brain.</p>
+
+    <h3 class="mt-10 font-display text-2xl font-bold">Start Today: Your Future Self Is Counting on It</h3>
+    <p class="mt-3 leading-relaxed text-ink/70">The best study plan is the one you actually follow, and the one you follow is the one that adapts to your life. Generate your free plan above, tick your first session today, and let spaced repetition do the heavy lifting. Sixty days from now, you'll be glad you started now. Good luck — Pilot your preparation.</p>
+  </div>
+</article>
+
+<!-- ================= FAQS ================= -->
+<section class="no-print mx-auto max-w-3xl px-4 sm:px-6 py-14">
+  <h2 class="font-display text-3xl font-extrabold tracking-tight text-center">Frequently asked questions</h2>
+  <div class="mt-8 space-y-3">
+    <details class="faq rounded-2xl border border-ink/10 bg-cream/60 px-5 py-4">
+      <summary class="flex items-center justify-between gap-4 font-bold">Is PrepPilot really free?<span class="faq-icon font-display text-2xl text-amber-500 leading-none">+</span></summary>
+      <p class="mt-2 text-sm text-ink/70 leading-relaxed">Yes — 100% free with unlimited plan generations. No signup, no paywall, no watermark, no trial period that expires.</p>
+    </details>
+    <details class="faq rounded-2xl border border-ink/10 bg-cream/60 px-5 py-4">
+      <summary class="flex items-center justify-between gap-4 font-bold">How does the AI build my study plan?<span class="faq-icon font-display text-2xl text-amber-500 leading-none">+</span></summary>
+      <p class="mt-2 text-sm text-ink/70 leading-relaxed">You enter your exam date, daily hours and topics. The AI reverse-plans from your exam date backwards — placing harder topics in morning sessions, weaving in spaced-repetition revisions at 1, 3, 7 and 14 days, scheduling mock tests with analysis sessions, and keeping the final day as a light buffer.</p>
+    </details>
+    <details class="faq rounded-2xl border border-ink/10 bg-cream/60 px-5 py-4">
+      <summary class="flex items-center justify-between gap-4 font-bold">What is spaced repetition and why does it matter?<span class="faq-icon font-display text-2xl text-amber-500 leading-none">+</span></summary>
+      <p class="mt-2 text-sm text-ink/70 leading-relaxed">It's the research-backed technique of revisiting each topic at expanding intervals (1, 3, 7, 14 days) to beat the forgetting curve. PrepPilot schedules these revision sessions for you automatically — it's the single biggest reason the plans work.</p>
+    </details>
+    <details class="faq rounded-2xl border border-ink/10 bg-cream/60 px-5 py-4">
+      <summary class="flex items-center justify-between gap-4 font-bold">What happens if I miss a day of study?<span class="faq-icon font-display text-2xl text-amber-500 leading-none">+</span></summary>
+      <p class="mt-2 text-sm text-ink/70 leading-relaxed">Nothing breaks. Tap "Re-plan remaining" and the AI redistributes your unchecked sessions across the days you have left, keeping the plan realistic instead of piling everything onto tomorrow.</p>
+    </details>
+    <details class="faq rounded-2xl border border-ink/10 bg-cream/60 px-5 py-4">
+      <summary class="flex items-center justify-between gap-4 font-bold">Which exams is PrepPilot good for?<span class="faq-icon font-display text-2xl text-amber-500 leading-none">+</span></summary>
+      <p class="mt-2 text-sm text-ink/70 leading-relaxed">Any exam with a date and a syllabus: JEE, NEET, UPSC, SSC, banking exams, CA, board exams, university semesters, GRE, GMAT and professional certifications — in English or Hinglish.</p>
+    </details>
+    <details class="faq rounded-2xl border border-ink/10 bg-cream/60 px-5 py-4">
+      <summary class="flex items-center justify-between gap-4 font-bold">Do I need an account? Is my data private?<span class="faq-icon font-display text-2xl text-amber-500 leading-none">+</span></summary>
+      <p class="mt-2 text-sm text-ink/70 leading-relaxed">No account needed. Your plan is generated in your browser session and your checkmarks live only in your browser's local storage. Nothing is uploaded to or stored on any server.</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="no-print border-t border-ink/10 bg-ink text-cream">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div class="flex items-center gap-2.5">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#F59E0B"/><path d="M32 14 8 24l24 10 18-7.5V38h4V24L32 14z" fill="#1E1B4B"/><path d="M18 34.5V44c0 3.3 6.3 6 14 6s14-2.7 14-6v-9.5l-14 5.8-14-5.8z" fill="#FFFBF2"/></svg>
+        <span class="font-display font-extrabold text-lg">PrepPilot</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-cream/70">
+        <a href="#" class="hover:text-cream transition">About</a>
+        <a href="#" class="hover:text-cream transition">Contact</a>
+        <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+        <a href="#" class="hover:text-cream transition">Terms of Service</a>
+      </nav>
+    </div>
+    <p class="mt-6 text-xs text-cream/50">© 2026 PrepPilot. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
